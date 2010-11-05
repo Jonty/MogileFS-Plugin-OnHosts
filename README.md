@@ -19,6 +19,10 @@ to move them to the SSD machines.
 * The less popular files are put into a class with a NotOnHosts replication
 policy that ensures they are not on the SSD machines.
 
+* Once per week, the class is changed on files that are newly popular, or no
+longer popular. The replication policies add and remove the files to the SSD
+nodes as necessary.
+
 Configuration
 -------------
 Set the replication policy in the DB as usual, pass the hosts you wish to
